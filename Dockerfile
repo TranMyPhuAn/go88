@@ -7,6 +7,7 @@ COPY package-lock.json .
 
 COPY app ./app
 COPY config ./config
+COPY daily ./daily
 COPY data ./data
 COPY policies ./policies
 COPY public ./public
@@ -37,6 +38,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 8090
 
 CMD ["node", "server.js"]
